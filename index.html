@@ -1,0 +1,122 @@
+!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Butik Baju Modern</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #c69c6d, #2ab7b7);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+    .item {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    .item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .item:hover img {
+      transform: scale(1.1);
+    }
+    .info {
+      padding: 1rem;
+      text-align: center;
+    }
+    .info h2 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: #2ab7b7;
+    }
+    .info p {
+      color: #c69c6d;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #c69c6d;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Butik Elegan</h1>
+    <p>Aneka Pilihan Baju Modern</p>
+  </header>
+
+  <div class="container">
+    <div class="item">
+      <img src="https://via.placeholder.com/400x300?text=Baju+1" alt="Baju 1">
+      <div class="info">
+        <h2>Gaun Santai</h2>
+        <p>Rp 350.000</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/400x300?text=Baju+2" alt="Baju 2">
+      <div class="info">
+        <h2>Kemeja Linen</h2>
+        <p>Rp 250.000</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/400x300?text=Baju+3" alt="Baju 3">
+      <div class="info">
+        <h2>Dress Formal</h2>
+        <p>Rp 450.000</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://via.placeholder.com/400x300?text=Baju+4" alt="Baju 4">
+      <div class="info">
+        <h2>Cardigan Rajut</h2>
+        <p>Rp 300.000</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Butik Elegan. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        alert(`Anda memilih: ${item.querySelector('h2').textContent}`);
+      });
+    });
+  </script>
+</body>
+</html>
