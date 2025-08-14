@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloomé Ghaisani — Butik Serba Ada</title>
+  <meta name="description" content="Bloomé Ghaisani — butik serba ada oleh Naifa Ghaisani: gamis, kemeja, hijab, sepatu, dan aksesori.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">BG</div>
+      <div>
+        <h1>Bloomé Ghaisani</h1>
+        <p class="tagline">Butik serba ada oleh <strong>Naifa Ghaisani</strong></p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#koleksi">Koleksi</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <div class="actions">
+      <button id="audioToggle" class="btn ghost" aria-label="Toggle musik latar">
+        <span>♫</span>
+      </button>
+      <button id="cartButton" class="btn cart" aria-label="Buka keranjang">
+        <span class="cart-icon">🛒</span>
+        <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO / SLIDER -->
+  <section class="hero">
+    <div class="slider" id="slider">
+      <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1593032465171-8e91b6d282de?q=80&w=1880&auto=format&fit=crop');">
+        <div class="slide-content">
+          <h2>Gamis Elegan</h2>
+          <p>Potongan anggun, material premium, warna-warna hangat vintage.</p>
+          <a href="#koleksi" class="btn primary">Lihat Koleksi</a>
+        </div>
+      </div>
+      <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1548883354-7622d3d4bfab?q=80&w=1880&auto=format&fit=crop');">
+        <div class="slide-content">
+          <h2>Hijab Nyaman</h2>
+          <p>Ringan, adem, dan mudah dipadu-padankan untuk harian.</p>
+          <a href="#koleksi" class="btn primary">Belanja Sekarang</a>
+        </div>
+      </div>
+      <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1528701800489-20be3c2ea4e6?q=80&w=1880&auto=format&fit=crop');">
+        <div class="slide-content">
+          <h2>Kemeja &amp; Sepatu</h2>
+          <p>Klasik dengan sentuhan modern — siap untuk segala suasana.</p>
+          <a href="#koleksi" class="btn primary">Telusuri</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="ctrl prev" id="prevSlide" aria-label="Slide sebelumnya">‹</button>
+      <button class="ctrl next" id="nextSlide" aria-label="Slide selanjutnya">›</button>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features reveal">
+    <div class="feature-card">
+      <div class="feature-icon">✨</div>
+      <h3>Kurasi Premium</h3>
+      <p>Item terpilih dengan kualitas terbaik dan detail yang rapi.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Checkout Cepat</h3>
+      <p>Keranjang ringkas, ringkas, dan proses checkout sederhana.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎧</div>
+      <h3>Backsound Ringan</h3>
+      <p>Audio latar bebas hak cipta (dihasilkan di browser) — bisa dinyalakan/matiin.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section id="koleksi" class="catalog">
+    <div class="catalog-head">
+      <h2>Koleksi Terbaru</h2>
+      <div class="tools">
+        <input type="search" id="searchInput" placeholder="Cari: hijab, gamis, kemeja, sepatu..." />
+        <select id="sortSelect" aria-label="Urutkan">
+          <option value="newest">Terbaru</option>
+          <option value="priceAsc">Harga: termurah</option>
+          <option value="priceDesc">Harga: termahal</option>
+        </select>
+      </div>
+    </div>
+    <div id="productGrid" class="grid"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="tentang" class="about reveal">
+    <div class="about-card">
+      <h2>Tentang Bloomé Ghaisani</h2>
+      <p>
+        Selamat datang di <strong>Bloomé Ghaisani</strong>, butik serba ada milik <strong>Naifa Ghaisani</strong>.
+        Kami menghadirkan <em>gamis</em>, <em>kemeja</em>, <em>hijab</em>, <em>sepatu</em>, dan aksesori
+        dengan nuansa <em>coklat muda vintage</em> dan kilau <em>copper</em> yang hangat.
+      </p>
+      <p>
+        Nikmati pengalaman belanja yang halus, estetis, dan cepat — dari menambah ke keranjang hingga checkout.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontak" class="contact reveal">
+    <h2>Kontak</h2>
+    <div class="contact-grid">
+      <form id="contactForm" class="card">
+        <label>Nama
+          <input type="text" required placeholder="Nama kamu" />
+        </label>
+        <label>Email
+          <input type="email" required placeholder="nama@email.com" />
+        </label>
+        <label>Pesan
+          <textarea rows="4" required placeholder="Tulis pesan..."></textarea>
+        </label>
+        <button type="submit" class="btn primary">Kirim</button>
+      </form>
+      <div class="card info">
+        <h3>Toko Offline</h3>
+        <p>Jl. Contoh Estetika No. 8, Jakarta</p>
+        <p>IG: <a href="#" rel="noopener"> @bloome.ghaisani </a></p>
+        <p>Jam: 10.00 – 21.00 WIB</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Keranjang</h3>
+      <button id="closeCart" class="btn ghost" aria-label="Tutup keranjang">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <span>Total</span>
+        <strong id="cartTotal">Rp0</strong>
+      </div>
+      <a href="checkout.html" class="btn primary full" id="checkoutBtn">Checkout</a>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Bloomé Ghaisani — Dibuat dengan cinta.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

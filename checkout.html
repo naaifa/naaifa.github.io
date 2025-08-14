@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout — Bloomé Ghaisani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="checkout-body">
+  <header class="site-header compact">
+    <div class="brand">
+      <div class="logo">BG</div>
+      <div>
+        <h1>Checkout</h1>
+        <p class="tagline">Bloomé Ghaisani</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Kembali</a>
+    </nav>
+  </header>
+
+  <main class="checkout-main">
+    <section class="summary card">
+      <h2>Ringkasan Pesanan</h2>
+      <div id="summaryItems" class="summary-items"></div>
+      <div class="summary-total">
+        <span>Total</span>
+        <strong id="summaryTotal">Rp0</strong>
+      </div>
+    </section>
+
+    <section class="form card">
+      <h2>Data Penerima</h2>
+      <form id="checkoutForm">
+        <label>Nama Lengkap
+          <input type="text" id="name" required placeholder="Naifa Ghaisani" />
+        </label>
+        <label>No. HP / WA
+          <input type="tel" id="phone" required placeholder="08xxxxxxxxxx" />
+        </label>
+        <label>Alamat Lengkap
+          <textarea id="address" rows="3" required placeholder="Alamat pengiriman..."></textarea>
+        </label>
+        <label>Metode Pembayaran
+          <select id="payment" required>
+            <option value="transfer">Transfer Bank</option>
+            <option value="ewallet">E-Wallet</option>
+            <option value="cod">COD</option>
+          </select>
+        </label>
+        <button type="submit" class="btn primary full">Buat Pesanan</button>
+        <p class="note">*Ini simulasi checkout — tidak memproses pembayaran nyata.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="orderSuccess" class="success toast" hidden>
+    <div class="toast-content">
+      <h3>Pesanan Berhasil 🎉</h3>
+      <p>Terima kasih! Rincian pesanan telah disimpan di browser Anda.</p>
+      <a class="btn ghost" href="index.html">Kembali ke Beranda</a>
+    </div>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
